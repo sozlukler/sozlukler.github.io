@@ -242,7 +242,14 @@ body {
   background-color: #555;
 }
 </style>
-
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="progres-bar.css">
+    <style>
+    html { min-height:100vh;}
+    body { background-color:#fafafa; font-family:'Roboto';}
+    .container { margin:150px auto; max-width:960px;}
+    .mediPlayer { float:left; margin:20px;}
+    </style>
 </head>
 <body>
 <header>
@@ -362,7 +369,9 @@ function searchTable() {
 <tr><td>adjective</td><td>divine </td><td>relating to or coming from a God </td><td> </td><td><a href="https://howjsay.com/mp3/divine.mp3" target="_blank"><img src="/asset/audio.png" alt="icon"></img></a></td><td></td></tr>
 
 
-<tr><td>n</td><td> </td><td> </td><td> </td><td><a href="https://howjsay.com/mp3/wisdom.mp3" target="_blank"><img src="/asset/audio.png" alt="icon"></img></a></td><td></td></tr>
+<tr><td>n</td><td> </td><td> </td><td> </td><td><div class="mediPlayer">
+    <audio class="listen" preload="none" data-size="50" src="sounds/way.mp3"></audio>
+</div></td><td></td></tr>
 
  
 </table></main>
@@ -372,6 +381,21 @@ v  : verb
 n  :noun
 adv: adverb
 adj: adjective
+
+
+
+</div>
+<!-- Media Player / -->
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="player.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.mediPlayer').mediaPlayer();
+    });
+</script>
+
 
 <script>
 //Get the button
